@@ -46,5 +46,6 @@ class Main{
         System.out.println("*******");
         System.out.println();
         human2.hired(human1);
+        System.out.println("This program is contributed by Aditi");
     }
 }
