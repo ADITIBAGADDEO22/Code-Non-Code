@@ -28,9 +28,10 @@ class Human2 extends Human{
         this.height=height;
         this.leetCode_rank=leetCode;
     }
-    void hired(Human1 human1){
+    void placed(Human1 human1)
+    {
         System.out.println("Name is :"+name+", Height is :"+height+", Age is :"+age+", LeetCode rank is :"+leetCode_rank+" ");
-if(human1.leetCode_rank>this.leetCode_rank)
+        if(human1.leetCode_rank>this.leetCode_rank)
     System.out.println("The company allotted is: Google and congratulations to you");
 else {
     System.out.println("The company allotted is: TCS , good but you can try for other companies too");
@@ -41,10 +42,10 @@ class Main{
     public static void main(String[] args) {
         Human1 human1=new Human1("Aditi Bagaddeo",5.5,19,20);
         Human2 human2=new Human2("Ashish Saha",5.7,25,21);
-        human1.hired(human2);
+        human1.placed(human2);
         System.out.println();
         System.out.println("*******");
         System.out.println();
-        human2.hired(human1);
+        human2.placed(human1);
     }
 }
