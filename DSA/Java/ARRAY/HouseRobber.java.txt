@@ -1,0 +1,38 @@
+package com.company.Arrays;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class HouseRobber {
+    static int rob(int[] nums) {
+        if(nums.length==3){
+            if(nums[1]>nums[0]+nums[2])
+                return nums[1];
+            else
+                return nums[0]+nums[2];
+        }
+        ArrayList<Integer>removing_list=new ArrayList<>();
+    int sorted_arr[]=Arrays.copyOfRange(nums,0,nums.length);
+    Arrays.sort(sorted_arr);
+    int sum=0;
+        for (int i = 0; i < nums.length; i++)
+            removing_list.add(nums[i]);
+        int afterEle_index=-1,beforeEle_index=-1;
+
+        for (int i = sorted_arr.length-1; i>=0; i--) {
+            if(removing_list.contains(sorted_arr[i])) {
+                int presentEle_index=removing_list.indexOf(sorted_arr[i]);
+                sum = sum + sorted_arr[i];
+                removing_list.set(presentEle_index,-1);
+                if(presentEle_index!=sorted_arr.length-1)
+                    removing_list.set(presentEle_index+1,-1);
+                if(presentEle_index!=0)
+                    removing_list.set(presentEle_index-1,-1);
+            }
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        System.out.println(rob(new int[]{1,7,9,4}));
+    }
+}
