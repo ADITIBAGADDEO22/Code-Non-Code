@@ -9,7 +9,7 @@
 -> *Bootstrap makes responsive web design a reality. It makes it possible for a web page or app to detect the visitor's screen size and orientation and automatically adapt the display accordingly.* 
 
 ---
-### _Bootstrap is mostly used in CSS, so that rases the question " What is Bootstap in CSS? "._
+### _Bootstrap is mostly used to make CSS work/section of a website/app easier, so that rases the question " What is Bootstap in CSS? "._
 -> *The most popular CSS framework for developing responsive and mobile-first websites is Bootstrap. The newest version is Bootstrap 5.
 Bootstrap addresses the requirements of those technologies in design and includes UI components, layouts, JavaScript tools and the implementation framework. The software is available precompiled or as source code.*
 
